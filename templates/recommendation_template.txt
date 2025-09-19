@@ -1,0 +1,6 @@
+To Whom It May Concern,
+
+I am pleased to recommend {{ name }} from {{ school }}. Their tenure from {{ start_date }} to {{ end_date }} has been exemplary.
+
+Sincerely,
+[Your Name]

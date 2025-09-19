@@ -1,0 +1,8 @@
+Dear {{ name }},
+
+Congratulations! We are delighted to inform you that you have been accepted to {{ school }} for the period starting {{ start_date }} and ending {{ end_date }}.
+
+We look forward to your success.
+
+Best regards,  
+[Your Name]

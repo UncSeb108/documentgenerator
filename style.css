@@ -1,53 +1,207 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --success-color: #27ae60;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+    color: white;
+    padding: 30px;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    margin-top: 30px;
-    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-form {
-    background: #fff;
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 30px 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.app-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 600px;
+}
+
+.form-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    background-color: var(--light-color);
+}
+
+.preview-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    background-color: white;
+    border-left: 1px solid #ddd;
+}
+
+.form-group {
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
-    margin-bottom: 15px;
-    color: #222;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-color);
 }
 
 input, select {
     width: 100%;
-    padding: 8px 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background: #0078d7;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.2s;
+    transition: border 0.3s;
 }
 
-button[type="submit"]:hover {
-    background: #005fa3;
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+button {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+.preview-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    min-height: 400px;
+    background: #f9f9f9;
+    font-family: 'Times New Roman', serif;
+    line-height: 1.8;
+}
+
+.preview-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.preview-content {
+    margin-bottom: 30px;
+}
+
+.preview-footer {
+    margin-top: 40px;
+}
+
+.signature {
+    margin-top: 50px;
+}
+
+.template-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.template-option {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.template-option.active {
+    border-color: var(--secondary-color);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.template-option:hover {
+    border-color: var(--secondary-color);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.download-btn {
+    background: var(--success-color);
+}
+
+.download-btn:hover {
+    background: #219653;
+}
+
+.reset-btn {
+    background: var(--accent-color);
+}
+
+.reset-btn:hover {
+    background: #c0392b;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--dark-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+    
+    .preview-section {
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
 }

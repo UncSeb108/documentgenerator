@@ -1,40 +1,79 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dukatech document write Automation</title>
+    <title>Dukatech Document Automation</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-    <h1>Input details of intern</h1>
-    <form action="">
-                <label>
-            Name:
-            <input type="text" name="name" required>
-        </label><br>
-        <label>
-            School:
-            <input type="text" name="school" required>
-        </label><br>
-        <label>
-            Start Date:
-            <input type="date" name="startDate" required>
-        </label><br>
-        <label>
-            End Date:
-            <input type="date" name="endDate" required>
-        </label><br>
-        <label>
-            Document Type:
-            <select name="docType" required>
-                <option value="recommendation">Recommendation</option>
-                <option value="acceptance">Acceptance</option>
-            </select>
-        </label><br>
-        <button type="submit">Generate Document</button>
-    </form>
+    <div class="container">
+        <header>
+            <h1>Dukatech Document Automation</h1>
+            <p class="subtitle">Generate professional recommendation and acceptance letters in seconds</p>
+        </header>
+        
+        <div class="app-container">
+            <section class="form-section">
+                <h2>Intern Details</h2>
+                <form id="docForm">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter intern's full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="school">School/University:</label>
+                        <input type="text" id="school" name="school" required placeholder="Enter school name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="startDate">Internship Start Date:</label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="endDate">Internship End Date:</label>
+                        <input type="date" id="endDate" name="endDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Document Type:</label>
+                        <div class="template-selector">
+                            <div class="template-option active" data-type="recommendation">
+                                Recommendation Letter
+                            </div>
+                            <div class="template-option" data-type="acceptance">
+                                Acceptance Letter
+                            </div>
+                        </div>
+                        <input type="hidden" id="docType" name="docType" value="recommendation">
+                    </div>
+                    
+                    <button type="submit">Generate Document</button>
+                </form>
+                
+                <div class="actions">
+                    <button class="download-btn" id="downloadBtn" disabled>Download Document</button>
+                    <button class="reset-btn" id="resetBtn">Reset Form</button>
+                </div>
+            </section>
+            
+            <section class="preview-section">
+                <h2>Document Preview</h2>
+                <div class="preview-container" id="preview">
+                    <p>Fill out the form and click "Generate Document" to see a preview here.</p>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>Dukatech Document Automation Tool &copy; 2023 | Streamlining your documentation process</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.1.0/docx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script src="script.js"></script>
-    <script src="libs/FileSaver.min.js"></script>
 </body>
 </html>

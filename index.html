@@ -64,7 +64,8 @@
           <div class="form-group"><label>First Name:</label><input type="text" id="conFirstName" required></div>
           <div class="form-group"><label>Second Name:</label><input type="text" id="conSecondName" required></div>
           <div class="form-group"><label>Last Name:</label><input type="text" id="conLastName" required></div>
-          <div class="form-group"><label>ID Number:</label><input type="text" id="conID" required></div>
+          <div class="form-group"><label>ID Number:</label><input type="text" id="conID"  pattern="\d{8}" maxlength="8" minlength="8" 
+         required placeholder="Enter 8-digit ID number"></div>
           <div class="form-group"><label>School/University:</label><input type="text" id="conSchool" placeholder="(if applicable)"></div>
           <div class="form-group"><label>Department:</label>
             <select id="conDepartment" required>

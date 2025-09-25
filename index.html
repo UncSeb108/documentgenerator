@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <title>Dukatech Document Generator</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Tabs above forms */
-    
-  </style>
 </head>
 <body>
   <div class="container">
@@ -27,66 +23,65 @@
         </div>
 
         <!-- Forms -->
-        <section class="form-section active" id="recommendationForm">
-          <h2>Recommendation Letter</h2>
-          <form>
-            <div class="form-group"><label>First Name:</label><input type="text" required></div>
-            <div class="form-group"><label>Second Name:</label><input type="text" required></div>
-            <div class="form-group"><label>Last Name:</label><input type="text" required></div>
-            <div class="form-group">
-              <label>Department:</label>
-              <select required>
-                <option value="">-- Select Department --</option>
-                <option>Finance</option><option>Marketing</option>
-                <option>Cyber Security</option><option>Artificial Intelligence</option>
-                <option>Technology</option><option>Virtual Reality</option>
-                <option>Marketplace</option><option>Operations</option>
-                <option>Customer Care</option>
-              </select>
-            </div>
-            <div class="form-group"><label>Key Strengths:</label><input type="text" placeholder="Highlight 1 or 2 strengths"></div>
-            <div class="form-group"><label>Internship Start Date:</label><input type="date" required></div>
-            <div class="form-group"><label>Internship End Date:</label><input type="date" required></div>
-            <button type="submit">Generate Recommendation</button>
-          </form>
-        </section>
+      <section class="form-section active" id="recommendationForm">
+        <h2>Recommendation Letter</h2>
+        <form id="formRecommendation">
+          <div class="form-group"><label>First Name:</label><input type="text" id="recFirstName" required></div>
+          <div class="form-group"><label>Second Name:</label><input type="text" id="recSecondName" required></div>
+          <div class="form-group"><label>Last Name:</label><input type="text" id="recLastName" required></div>
+          <div class="form-group"><label>Department:</label>
+            <select id="recDepartment" required>
+              <option value="">-- Select Department --</option>
+              <option>Finance</option><option>Marketing</option>
+              <option>Cyber Security</option><option>Artificial Intelligence</option>
+              <option>Technology</option><option>Virtual Reality</option>
+              <option>Marketplace</option><option>Operations</option>
+              <option>Customer Care</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Key Strengths:</label><input type="text" id="recStrengths" placeholder="Highlight 1 or 2 strengths"></div>
+          <div class="form-group"><label>Internship Start Date:</label><input type="date" id="recStart" required></div>
+          <div class="form-group"><label>Internship End Date:</label><input type="date" id="recEnd" required></div>
+          <button type="submit">Generate Recommendation</button>
+        </form>
+      </section>
 
-        <section class="form-section" id="acceptanceForm">
-          <h2>Acceptance Letter</h2>
-          <form>
-            <div class="form-group"><label>First Name:</label><input type="text" required></div>
-            <div class="form-group"><label>Second Name:</label><input type="text" required></div>
-            <div class="form-group"><label>Last Name:</label><input type="text" required></div>
-            <div class="form-group"><label>Internship Start Date:</label><input type="date" required></div>
-            <div class = "form-group"><label>Duration</label><input type="text"></div>
-            <button type="submit">Generate Acceptance</button>
-          </form>
-        </section>
+      <section class="form-section" id="acceptanceForm">
+        <h2>Acceptance Letter</h2>
+        <form id="formAcceptance">
+          <div class="form-group"><label>First Name:</label><input type="text" id="accFirstName" required></div>
+          <div class="form-group"><label>Second Name:</label><input type="text" id="accSecondName" required></div>
+          <div class="form-group"><label>Last Name:</label><input type="text" id="accLastName" required></div>
+          <div class="form-group"><label>Internship Start Date:</label><input type="date" id="accStart" required></div>
+          <div class="form-group"><label>Duration:</label><input type="text" id="accDuration" placeholder="e.g. 3 months"></div>
+          <button type="submit">Generate Acceptance</button>
+        </form>
+      </section>
 
-        <section class="form-section" id="contractForm">
-          <h2>Internship Contract</h2>
-          <form>
-            <div class="form-group"><label>First Name:</label><input type="text" required></div>
-            <div class="form-group"><label>Second Name:</label><input type="text" required></div>
-            <div class="form-group"><label>Last Name:</label><input type="text" required></div>
-            <div class="form-group"><label>ID Number:</label><input type="text" required></div>
-            <div class="form-group"><label>School/University:</label><input type="text" if applicable></div>
-            <div class="form-group">
-              <label>Department:</label>
-              <select required>
-                <option value="">-- Select Department --</option>
-                <option>Finance</option><option>Marketing</option>
-                <option>Cyber Security</option><option>Artificial Intelligence</option>
-                <option>Technology</option><option>Virtual Reality</option>
-                <option>Marketplace</option><option>Operations</option>
-                <option>Customer Care</option>
-              </select>
-            </div>
-            <div class="form-group"><label>Reporting Date:</label><input type="date" required></div>
-            <div class="form-group"><label>Internship Duration:</label><input type="text" placeholder="e.g. 3 months" required></div>
-            <button type="submit">Generate Contract</button>
-          </form>
-        </section>
+      <section class="form-section" id="contractForm">
+        <h2>Internship Contract</h2>
+        <form id="formContract">
+          <div class="form-group"><label>First Name:</label><input type="text" id="conFirstName" required></div>
+          <div class="form-group"><label>Second Name:</label><input type="text" id="conSecondName" required></div>
+          <div class="form-group"><label>Last Name:</label><input type="text" id="conLastName" required></div>
+          <div class="form-group"><label>ID Number:</label><input type="text" id="conID" required></div>
+          <div class="form-group"><label>School/University:</label><input type="text" id="conSchool" placeholder="(if applicable)"></div>
+          <div class="form-group"><label>Department:</label>
+            <select id="conDepartment" required>
+              <option value="">-- Select Department --</option>
+              <option>Finance</option><option>Marketing</option>
+              <option>Cyber Security</option><option>Artificial Intelligence</option>
+              <option>Technology</option><option>Virtual Reality</option>
+              <option>Marketplace</option><option>Operations</option>
+              <option>Customer Care</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Reporting Date:</label><input type="date" id="conReporting" required></div>
+          <div class="form-group"><label>Internship Duration:</label><input type="text" id="conDuration" placeholder="e.g. 3 months" required></div>
+          <button type="submit">Generate Contract</button>
+        </form>
+      </section>
+  
       </div>
 
       <!-- RIGHT SIDE: Preview -->
@@ -122,5 +117,8 @@
       });
     });
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>

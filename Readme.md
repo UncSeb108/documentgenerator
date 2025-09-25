@@ -28,17 +28,6 @@ The app provides a simple **form → preview → PDF download** workflow, allowi
 
 ---
 
-## 📂 Project Structure
-
-dukatech-docs/
-│
-├── index.html # Main app (forms + preview + tabs)
-├── style.css # Global styling and layout
-├── script.js # Handles form switching, preview, and PDF generation
-├── README.md # Project documentation
-└── /assets # (optional) logos, images, icons
-
-
 ---
 
 ## 🛠️ Tech Stack

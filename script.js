@@ -228,8 +228,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div style="margin-top: 40px;">
                     Yours sincerely,<br><br>
                     
-                    <strong>Sebastian Avonde,</strong><br>
-                    <strong>CTO,</strong><br>
+                    <strong>Kelvin Mulama,</strong><br>
+                    <strong>Founder and CEO,</strong><br>
                     <strong>Dukatech Solutions Limited.</strong>
                 </div>
             </div>
